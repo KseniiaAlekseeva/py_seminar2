@@ -1,5 +1,6 @@
-flag = False
+from random import randint
 
+flag = False
 while not flag:
     period = int(input("Enter period: "))
     if not (period < 1 or period > 100):
@@ -10,7 +11,8 @@ count = 0
 mx_count = 0
 
 for i in range(period):
-    temp = int(input(f"{i} Enter temperature: "))
+    temp = randint(-50, 50)
+    print(f"{i}: {temp}")
     if temp > 0:
         count += 1
     if i == period-1 or temp <= 0:
